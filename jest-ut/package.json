@@ -1,0 +1,14 @@
+{
+  "name": "jest-ut",
+  "version": "1.0.0",
+  "description": "JS unit test cases",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "gururaj",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.0.0"
+  }
+}
