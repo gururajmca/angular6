@@ -44,3 +44,22 @@ test('Check user name contains admin', ()=> {
 test('Check admin contains i/I', ()=> {
   expect('admin').toMatch(/I/i);
 });
+
+//Ajax data check with promise
+test('Check user name is matching Leanne Graham', () => {
+  expect.assertions(1);
+  return functions.fetchUser().then(data => {
+      expect(data.name).toEqual('Leanne Graham');
+  })
+});
+
+//Ajax data check with Async and Await
+test('Check user name is matching Leanne Graham with Async and Await', async () => {
+  expect.assertions(1);
+  const data = await functions.fetchUser();
+  expect(data.name).toEqual('Leanne Graham');
+});
+
+test('Check username is Antonette', async () => {
+  await expect(functions.fetchData()).resolves.toBe('Antonette');
+});
